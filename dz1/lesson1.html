@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Урок 1</title>
+    <link rel="stylesheet" href=stayle.css> </head>
+
+<body>
+    <hr>
+    <div class="header"> </div>
+    <div class="contentWrap">
+        <div class="content">
+            <div class="center">
+                <h1>Урок 1 </h1>
+                  <p>
+                        <br>
+                    </p>
+                <div class="box">
+                   <h2>Задание 1</h2>
+                     <p>
+                        <br>
+                    </p>
+                    <p id="info">Введите температуру в градусах по Цельсию. </p>
+                    <input type="text" id="uAnswer" class="Answer">
+                    <p id="info1" class="Answer"> </p>
+                    <br> <a href="#" onClick="indata()" id="button">Конвертировать в f</a> </div>
+                <div class="tasktwo">
+                    <p>
+                        <br>
+                    </p>
+                    <h2>Задание 2</h2>
+                    <p>
+                        <br>
+                    </p>
+                    <p> var admin = "";
+                        <br> var name = "Василий";
+                        <br> admin += name;
+                        <br> writetwo(admin);
+                        <br>
+                    </p>
+                    <p>
+                        <br>
+                    </p>
+                    <p id="answertwo" class="Answer"> </p>
+                    <p>
+                        <br>
+                    </p>
+                    <h2>Задание 3</h2>
+                    <p>
+                        <br>
+                    </p>
+                    <p>Чему будет равно JS-выражение 1000 + "108"</p>
+                    <p>Задание 2</p>
+                    <p> function writethree(text) {
+                        <br> document.getElementById("answerthree").innerHTML = text ;
+                        <br> }
+                        <br> expression = 1000 + "108"
+                        <br> writethree(expression);
+                        <br> </p>
+                    <p>
+                       
+                        <br>
+                    </p>
+                    <p id="answerthree" class="Answer"> </p>
+                    
+                     <p>
+                        <br>
+                    </p>
+                    <h2>Задание 4</h2>
+                    <p>
+                        <br>
+                    </p>
+                    <p>
+                       Атрибут async <br>
+Поддерживается всеми браузерами, кроме IE9-. Скрипт выполняется полностью асинхронно. То есть, при обнаружении script async src="..." браузер не останавливает обработку страницы, а спокойно работает дальше. Когда скрипт будет загружен – он выполнится. <br>
+                  Атрибут defer <br>
+Поддерживается всеми браузерами, включая самые старые IE. Скрипт также выполняется асинхронно, не заставляет ждать страницу, но есть два отличия от async. <br>
+
+Первое – браузер гарантирует, что относительный порядок скриптов с defer будет сохранён. <br>
+                  Второе отличие – скрипт с defer сработает, когда весь HTML-документ будет обработан браузером. <br>
+                   
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <h6 class="footer"></h6>
+    <script type="text/javascript">
+        //задание 2
+        function writetwo(text) {
+            document.getElementById("answertwo").innerHTML = "Ответ: " + text;
+        }
+        var admin = "";
+        var name = "Василий";
+        admin += name;
+        writetwo(admin);
+        //задание 3
+        function writethree(text) {
+            document.getElementById("answerthree").innerHTML = "Ответ: " + text + "-Неявное приведение типов";
+        }
+        expression = 1000 + "108"
+        writethree(expression);
+        var answer = parseInt(Math.random() * 100);
+        var tryCount = 0;
+        var maxCount = 3;
+
+        function readInt() {
+            var number = document.getElementById("uAnswer").value;
+            return parseInt(number)
+        }
+
+        function write(text) {
+            document.getElementById("info1").innerHTML = text + "f";
+        }
+
+        function indata() {
+            var f = " ";
+            var len = readInt();
+            f += (9 / 5) * len
+            write(f);
+            return f;
+        }
+    </script>
+</body>
+
+</html>
